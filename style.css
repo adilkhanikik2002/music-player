@@ -1,0 +1,138 @@
+/* Base reset and layout */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Music Player Container */
+.music-player {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #fff;
+}
+
+/* Album Art */
+.cover img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Song Info */
+.song-info h2 {
+  margin: 10px 0 5px;
+  font-size: 1.4rem;
+}
+
+.song-info p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Audio Element */
+audio {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Control Buttons */
+.controls {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Volume Control */
+.volume-control {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.volume-control label {
+  font-size: 1rem;
+}
+
+.volume-control input[type=range] {
+  width: 60%;
+  max-width: 200px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .music-player {
+    padding: 15px;
+  }
+
+  .song-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .song-info p {
+    font-size: 0.9rem;
+  }
+
+  .controls button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .volume-control input[type=range] {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .music-player {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .controls {
+    gap: 5px;
+  }
+
+  .controls button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  .volume-control label {
+    font-size: 0.9rem;
+  }
+}
